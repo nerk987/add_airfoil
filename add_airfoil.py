@@ -30,6 +30,9 @@ def add_airfoil(filename):
     datFile = open(filename, 'r')
     # print("Dat File", datFile)
     for line in datFile:
+        line = line.replace(","," ")
+        line = line.replace(";"," ")
+        print(line)
         try:
             verts.append([0.0, float(line.split()[0]), float(line.split()[1])]) 
         except Exception:
@@ -57,7 +60,6 @@ class AddAirfoil(bpy.types.Operator, AddObjectHelper, ImportHelper):
             maxlen=255,  # Max internal buffer length, longer would be clamped.
         )
 
-       # filename = "S:\\Users\\Ian Huish\\Projects\\3D Prints\\Parametric\\Airfoils\\PW1211.dat"
 
         verts_loc = add_airfoil(self.filepath)
 
