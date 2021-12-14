@@ -2,7 +2,7 @@
    
 V1.0.0 Blender 3.0 Version
 
-Addon Download : [C_of_G.py](https://github.com/nerk987/add_airfoil/releases/download/v1.0.0/add_airfoil_1_0_0.zip) 
+Addon Download : [add_airfoil_1_0_0.zip](https://github.com/nerk987/add_airfoil/releases/download/v1.0.0/add_airfoil_1_0_0.zip) 
 
 ## Introduction
 This is a little addon to import an airfoil dat file into blender
