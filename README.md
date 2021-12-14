@@ -22,7 +22,7 @@ Click Shift A in the 3D viewport, and choose Mesh>Add Airfoil and select the dat
 
 ##Where to find airfoil dat files
 
-There are many resources. Try [Airfoiltools.com](https://airfoiltools.com)
+There are many resources. Try [Airfoiltools.com](http://www.airfoiltools.com)
 
 
 
