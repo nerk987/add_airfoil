@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Add Airfoil",
     "author": "JIan Huish",
-    "version": (1, 00, 0),
+    "version": (1, 1, 0),
     "blender": (3, 00, 0),
     "location": "Add Mesh > Add Airfoil",
     "description": "Read Dat file and create airfoil mesh",
@@ -10,7 +10,7 @@ bl_info = {
     "tracker_url": "http://github.com/nerk987/add_airfoil/issues",
     "category": "Add Mesh",
 }
-
+# Revised to name the mesh with the text from the first line
 import bpy
 import bmesh
 from bpy_extras.object_utils import AddObjectHelper
@@ -27,9 +27,13 @@ def add_airfoil(filename):
     no actual mesh data creation is done here.
     """
     verts = []
+    AirfoilName = ""
     datFile = open(filename, 'r')
-    # print("Dat File", datFile)
+    FirstLine = True
     for line in datFile:
+        if FirstLine:
+            AirfoilName = line[:-1]
+        FirstLine = False
         line = line.replace(","," ")
         line = line.replace(";"," ")
         print(line)
@@ -40,7 +44,7 @@ def add_airfoil(filename):
     # print("Verts: ", verts)
     datFile.close()
 
-    return verts
+    return verts, AirfoilName
 
 
 class AddAirfoil(bpy.types.Operator, AddObjectHelper, ImportHelper):
@@ -61,9 +65,12 @@ class AddAirfoil(bpy.types.Operator, AddObjectHelper, ImportHelper):
         )
 
 
-        verts_loc = add_airfoil(self.filepath)
+        verts_loc, AirfoilName = add_airfoil(self.filepath)
+        
+        if AirfoilName == "" or not AirfoilName.isalpha:
+            AirfoilName = "Airfoil"
 
-        mesh = bpy.data.meshes.new("Airfoil")
+        mesh = bpy.data.meshes.new(AirfoilName)
 
         bm = bmesh.new()
 
@@ -73,6 +80,8 @@ class AddAirfoil(bpy.types.Operator, AddObjectHelper, ImportHelper):
         bm.verts.ensure_lookup_table()
         for i in range(len(verts_loc)-1):
             bm.edges.new([bm.verts[i], bm.verts[i+1]])
+        bm.edges.new([bm.verts[0], bm.verts[-1]])
+        
 
         bm.to_mesh(mesh)
         mesh.update()
