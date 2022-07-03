@@ -2,7 +2,7 @@
    
 V1.1.0 Blender 3.0 Version
 
-Addon Download : [add_airfoil_1_1_0.zip](https://github.com/nerk987/add_airfoil/releases/download/v1.0.0/add_airfoil_1_1_0.zip) 
+Addon Download : [add_airfoil_1_1_0.zip](https://github.com/nerk987/add_airfoil/releases/download/v1.1.0/add_airfoil_1_1_0.zip) 
 
 Parametric 3D Printed Wing Design using Geometry Nodes (Blender 3.0 or higher)
 
