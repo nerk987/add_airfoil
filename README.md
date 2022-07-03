@@ -6,9 +6,9 @@ Addon Download : [add_airfoil_1_1_0.zip](https://github.com/nerk987/add_airfoil/
 
 Parametric 3D Printed Wing Design using Geometry Nodes (Blender 3.0 or higher)
 
-Blend File: [ParametricWingV01.blend](https://github.com/nerk987/add_airfoil/releases/download/v1.0.0/ParametricWingV01.blend) 
+Intended for use with the 3dpPlaneDesign parametric tool set: https://github.com/nerk987/3dpPlaneDesign
 
-Youtube Overview (For the Blend File, not the addon...):https://youtu.be/w0Qn-hiX6Dg
+
 
 ## Introduction
 This is a little addon to import an airfoil dat file into blender

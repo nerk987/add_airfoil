@@ -1,6 +1,6 @@
 bl_info = {
     "name": "Add Airfoil",
-    "author": "JIan Huish",
+    "author": "Ian Huish",
     "version": (1, 1, 0),
     "blender": (3, 00, 0),
     "location": "Add Mesh > Add Airfoil",
