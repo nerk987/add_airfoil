@@ -2,7 +2,7 @@ bl_info = {
     "name": "Add Airfoil",
     "author": "Ian Huish",
     "version": (2, 0, 0),
-    "blender": (4, 02, 0),
+    "blender": (4, 2, 0),
     "location": "File > Import > Add Airfoil",
     "description": "Read Dat file and create airfoil mesh",
     "warning": "",

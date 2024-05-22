@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "add_airfoil"
-version = "1.1.0"
+version = "2.0.0"
 name = "Add Airfoil"
 tagline = "Import Airfoil Dat Files into Blender"
 description = "Airfoil data files are freely available on the internet at sites like AirfoilTools. This addon allows these 'DAT' files to be inmported as mesh files in Blender."
