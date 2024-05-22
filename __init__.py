@@ -1,9 +1,9 @@
 bl_info = {
     "name": "Add Airfoil",
     "author": "Ian Huish",
-    "version": (1, 1, 0),
-    "blender": (3, 00, 0),
-    "location": "Add Mesh > Add Airfoil",
+    "version": (2, 0, 0),
+    "blender": (4, 02, 0),
+    "location": "File > Import > Add Airfoil",
     "description": "Read Dat file and create airfoil mesh",
     "warning": "",
     "wiki_url": "https://github.com/nerk987/add_airfoil",
@@ -100,11 +100,13 @@ def menu_func(self, context):
 def register():
     bpy.utils.register_class(AddAirfoil)
     bpy.types.VIEW3D_MT_mesh_add.append(menu_func)
+    bpy.types.TOPBAR_MT_file_import.append(menu_func)
 
 
 def unregister():
     bpy.utils.unregister_class(AddAirfoil)
     bpy.types.VIEW3D_MT_mesh_add.remove(menu_func)
+    bpy.types.TOPBAR_MT_file_import.remove(menu_func)
 
 
 if __name__ == "__main__":

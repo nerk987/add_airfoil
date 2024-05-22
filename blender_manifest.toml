@@ -1,0 +1,22 @@
+schema_version = "1.0.0"
+
+id = "add_airfoil"
+version = "1.1.0"
+name = "Add Airfoil"
+tagline = "Import Airfoil Dat Files into Blender"
+description = "Airfoil data files are freely available on the internet at sites like AirfoilTools. This addon allows these 'DAT' files to be inmported as mesh files in Blender."
+type = "add-on"
+
+
+# List defined by Blender and server, see:
+# https://docs.blender.org/manual/en/4.2/extensions/tags.html
+tags = ["Import-Export", "Mesh"]
+
+blender_version_min = "3.0"
+
+maintainer = "Nerk <nerk987@gmail.com"
+# License conforming to https://spdx.org/is suppose to dolicenses/
+# use "SPDX: prefix.
+license = [
+  "SPDX:GPL-2.0-or-later",
+]
